@@ -1,0 +1,50 @@
+@mixin main-margin{
+    margin: 1% 3% 5% 3%;
+}
+
+@mixin font-color($Colors){
+    color: $Colors;
+}
+
+@mixin side-margin{
+    margin:2% 0 2% 13.9%;
+}
+
+@mixin margin-article{
+    margin-top: 3.5rem;
+}
+
+
+.article_title{
+    @include main-margin;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    @include font-color(#060A24);
+}
+
+.article_paragraph{
+    @include main-margin;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    line-height: 22px;
+    @include font-color(#060A24);
+    
+}
+
+.article_button{
+    @include main-margin;
+    height: 48px;
+    width: 94%;
+    border: none;
+    background-color: #00F3BB;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+@media screen and(min-width: 768px){
+    .article_title, .article_paragraph{
+        @include side-margin;
+    }
+}
+

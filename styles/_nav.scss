@@ -1,0 +1,128 @@
+@import './_content';
+
+
+
+header{
+    @include main-margin;
+    .nav_bar{
+      position: relative;
+      .logo{
+        position: absolute;
+        top: 0.3em;
+        
+      }
+
+      .btn_check{
+        display: none;
+
+        &:checked ~ .btn_lbl_menu::before{
+          transform: translateY(-50%) rotate(45deg) scale(1.1);
+          top: 50%;
+        }
+        
+        &:checked ~ .btn_lbl_menu .btn_icon_nav{
+          transform: rotateY(90deg);
+        }
+    
+        &:checked ~ .btn_lbl_menu::after{
+          transform: translateY(-50%) rotate(-45deg) scale(1.1);
+          top: 50%;
+        }
+
+        &:checked ~ .navigation_items{
+          max-height: 30vh;
+        }
+      }
+      
+      .btn_lbl_menu{
+        padding: 0;
+        min-height: 2em;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      
+        &::before,
+        &::after,
+        .btn_icon_nav{
+          content: "";
+          background-color: #060A24;
+          width: 1.5em;
+          height: 0.1em;
+          position: absolute;
+          border-radius: 0.2em;
+          right: 1.3em;
+          transition: all 0.2s ease;
+        }
+  
+        &::before {
+          top: 0.5em;
+        }
+        .btn_icon_nav{
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &::after {
+          bottom: 0.5em;
+        }
+      }
+  
+
+      .navigation_items{
+          margin-top: 0.5rem;
+          padding: 0;
+          background-color: #0000EC;
+          max-height: 0;
+          overflow: hidden;
+          transition: all 1s ease;
+          .navigation_item{
+              list-style: none;
+              padding: 1.6%;
+              .navigation_link{
+                @include font-color(#FFFFFF);
+                  font-family: 'IBM Plex Mono', monospace;
+                  text-decoration: none;
+                  font-size:16px;
+                  line-height: 28px;
+              }
+          }
+      }
+
+      @media screen and (min-width: 768px) {
+
+          .logo{
+            width: 5vh;
+            top: 0.5em;
+          }
+        
+          .btn_lbl_menu{
+            display:none;
+          }
+
+          .navigation_items{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            max-height: 30vh;            
+            background-color: white;
+            .navigation_item{              
+              .navigation_link{
+                @include font-color(#000000);
+                &:hover{
+                  @include font-color(#00F3BB);
+                  text-decoration: line-through;
+                }
+
+                &:active{
+                  @include font-color(rgba(6,10,36,0.56));
+                  text-decoration: line-through;
+                }
+              }
+            }
+          }
+      }
+    }
+}
+
+
+
