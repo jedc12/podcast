@@ -293,10 +293,8 @@ header .nav_bar .navigation_items .navigation_item .navigation_link {
 .article_2 .embed {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
-  -ms-grid-rows: (auto)[4];
-      grid-template-rows: repeat(4, auto);
+  grid-template-columns: auto;
+  grid-template-rows: repeat(4, auto);
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -315,10 +313,8 @@ header .nav_bar .navigation_items .navigation_item .navigation_link {
   .article_2 .embed {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (auto)[2];
-        grid-template-columns: repeat(2, auto);
-    -ms-grid-rows: (auto)[2];
-        grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
     grid-column-gap: 20px;
     margin: 0 3rem 0 3rem;
   }
@@ -327,10 +323,8 @@ header .nav_bar .navigation_items .navigation_item .navigation_link {
 .article_3 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
-  -ms-grid-rows: (auto)[2];
-      grid-template-rows: repeat(2, auto);
+  grid-template-columns: auto;
+  grid-template-rows: repeat(2, auto);
 }
 
 .article_3_img {
@@ -351,10 +345,8 @@ header .nav_bar .navigation_items .navigation_item .navigation_link {
   .article_3 {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (auto)[2];
-        grid-template-columns: repeat(2, auto);
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
     margin: 2% 0 2% 13.9%;
   }
   .article_3_text {
@@ -375,10 +367,8 @@ header .nav_bar .navigation_items .navigation_item .navigation_link {
 .article_4_images {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
-  -ms-grid-rows: (auto)[6];
-      grid-template-rows: repeat(6, auto);
+  grid-template-columns: auto;
+  grid-template-rows: repeat(6, auto);
   justify-items: center;
 }
 
@@ -391,10 +381,8 @@ header .nav_bar .navigation_items .navigation_item .navigation_link {
   .article_4_images {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (auto)[3];
-        grid-template-columns: repeat(3, auto);
-    -ms-grid-rows: (auto)[2];
-        grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
   }
 }
 
@@ -488,7 +476,39 @@ header .nav_bar .navigation_items .navigation_item .navigation_link {
     text-align: center;
   }
   .article_6_section .article_button {
-    width: 22%;
+    width: 30%;
+  }
+}
+
+.article_title {
+  margin: 1% 3% 5% 3%;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  color: #060A24;
+}
+
+.article_paragraph {
+  margin: 1% 3% 5% 3%;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  line-height: 22px;
+  color: #060A24;
+}
+
+.article_button {
+  margin: 1% 3% 5% 3%;
+  height: 48px;
+  width: 94%;
+  border: none;
+  background-color: #00F3BB;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+@media screen and (min-width: 768px) {
+  .article_title, .article_paragraph {
+    margin: 2% 0 2% 13.9%;
   }
 }
 
@@ -520,6 +540,10 @@ header .nav_bar .navigation_items .navigation_item .navigation_link {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.footer_link {
+  color: #000000;
 }
 
 @media screen and (min-width: 768px) {
